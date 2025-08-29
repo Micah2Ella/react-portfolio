@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import "./App.css";
-import AboutMe from "./components/AboutMe";
+import aboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 
@@ -11,17 +11,15 @@ function App() {
             <div class="content">
                 <p>《 Micah Ella Abril's Portfolio 》</p>
                 <nav class="leftside">
-                    <a href={AboutMe ()}>About Me</a> 
-                    <a href="#port">Portfolio</a> 
-                    <a href="#contact">Contact Me</a> 
+                    <button id="AboutMe" class="navbutton">About Me</button> 
+                    <button id="Projects" class="navbutton">Portfolio</button> 
+                    <button id="ContactMe" class="navbutton">Contact Me</button> 
                 </nav>
                 <p id="sparkle">✧.*</p>
             </div>
         </div>
-
-        <div name="body">
-
-        </div>
+      
+      AboutMe ();
     </>
   );
 }

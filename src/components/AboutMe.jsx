@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 
-function AboutMe() {
+function aboutMe() {
     return (
         <div class="about" id="about">
             <label for="form-offer" class="ext-title">《 About Me 》</label><br></br>
@@ -10,4 +10,4 @@ function AboutMe() {
     );
 }
 
-export default AboutMe;
+export default aboutMe;
