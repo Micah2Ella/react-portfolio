@@ -1,30 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ModalSpirit() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const spirit = document.getElementById("modalSpirit");
-const openModalSpirit = document.getElementById("openModalSpirit");
-const closeModalSpirit = document.getElementById("closeModalSpirit");
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
 
-openModalSpirit.onclick = function() {
-  spirit.style.display = "block";
-}
-closeModalSpirit.onclick = function() {
-  spirit.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == spirit) {
-    spirit.style.display = "none";
-  } else if (event.target == buhay) {
-    buhay.style.display = "none";
-  } else if (event.target == lamentos) {
-    lamentos.style.display = "none";
-  }
-};
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleOutsideClick = (e) => {
+    if (e.target.className === "modal") {
+      closeModal();
+    }
+  };
 
   return (
-    <button id="openModalSpirit">Learn More</button>
-  ); 
-}
+    <>
+      <button onClick={openModal}>Learn More</button>
+
+      {isModalOpen && (
+        <div id="modalSpirit" className="modal" onClick={handleOutsideClick} style={{
+            display: "block",}}>
+            <div className="modal-content">
+            <h2>Inner Spirit - Game Pitch</h2>
+            <p>Want to watch Inner Spirit and the Game Pitch? Take a look at it here!</p>
+            <br></br><a href="https://drive.google.com/file/d/1h3HQZsNgmavLsETc3SxUItuwAU1r0j1j/view?usp=sharing"><img className="modalImage" src="src/images/link-spirit.png"/></a>
+            <div className="modal-footer">
+                <button id="closeModalSpirit" onClick={closeModal}>Close</button>
+            </div>
+            </div>
+        </div>
+      )}
+    </>
+  );
+}   
+
 
 export default ModalSpirit;

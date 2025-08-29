@@ -97,6 +97,7 @@ button:link, button:visited {
 
 .portcard {
     font-size: 3vh;
+    z-index: 1; 
     margin: 3vh;
     padding: 10vh;
     height: auto;
@@ -151,6 +152,7 @@ button:link, button:visited {
 
 .card-body {
     padding: 3vh;
+    z-index: 1; 
     margin:0;
     border-bottom-right-radius: 3vh;
     border-bottom-left-radius: 3vh;
@@ -159,6 +161,7 @@ button:link, button:visited {
 }
 
 .card-img-top {
+    z-index: 1; 
     border-top-right-radius: 3vh;
     border-top-left-radius: 3vh;
     height:140%;
@@ -194,15 +197,18 @@ textarea, input {
 }
 
 .box1 {
+    z-index: 3;
     width: 41vh;
 }
 
 .box2 {
+    z-index: 3;
     width: 41vh;
     height: 5vh;
 }
 
 .box3 {
+    z-index: 3;
     width: 41vh;
     height: 5vh;
 }
@@ -237,7 +243,8 @@ label {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  z-index: 3; 
+  margin: 20vh auto; 
   padding: 20px;
   border: 1px solid #888;
   width: 80%; 
@@ -261,6 +268,7 @@ label {
 }
 
 .modal-footer {
+  z-index: 3; 
   text-align: right;
   padding-top: 15px;
   border-top: 1px solid #eee;
@@ -268,6 +276,7 @@ label {
 }
 
 .modalImage {
+    z-index: 3; 
     align-content: center;
-    width: 80vh;
+    width: 30vw;
 }

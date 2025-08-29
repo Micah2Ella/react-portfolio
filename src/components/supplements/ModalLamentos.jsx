@@ -1,31 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 
-function ModalLamentos() {
+function ModalSpirit() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const lamentos = document.getElementById("modalLamentos");
-const openModalLamentos = document.getElementById("openModalLamentos");
-const closeModalLamentos = document.getElementById("closeModalLamentos");
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
 
-openModalLamentos.onclick = function() {
-  lamentos.style.display = "block";
-}
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
-closeModalLamentos.onclick = function() {
-  lamentos.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == lamentos) {
-    spirit.style.display = "none";
-  } else if (event.target == buhay) {
-    buhay.style.display = "none";
-  } else if (event.target == spirit) {
-    lamentos.style.display = "none";
-  }
-};
+  const handleOutsideClick = (e) => {
+    if (e.target.className === "modal") {
+      closeModal();
+    }
+  };
 
   return (
-    <button id="openModalLamentos">Learn More</button>
-  ); 
-}
+    <>
+      <button onClick={openModal}>Learn More</button>
 
-export default ModalLamentos;
+      {isModalOpen && (
+        <div id="modalLamentos" className="modal" onClick={handleOutsideClick} style={{
+        display: "block",}}>
+            <div class="modal-content">
+                <h2>La Lorna - Horror Game Animations</h2>
+                <p>Here is the full folder of animations and concept art I made for La Lorna!</p>
+                <br></br><a href="https://drive.google.com/drive/folders/1_0oNxLVWSRGgIyT-8JVw8fwcvpF8ewn3?usp=sharing"><img class="modalImage" src="src/images/link-lamentos.jpg"></img></a>
+                <div class="modal-footer">
+                    <button id="closeModalLamentos"onClick={closeModal}>Close</button>
+                </div>
+            </div>
+        </div>
+
+      )}
+    </>
+  );
+}   
+
+
+export default ModalSpirit;
