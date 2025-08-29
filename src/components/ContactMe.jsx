@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import SubmitForm from "./supplements/SubmitForm";
 
 function ContactMe() {
     return (
@@ -19,7 +20,7 @@ function ContactMe() {
                 <label for="Text1" class="form-label">╰》Message: </label>
                 <textarea class="form-control indent box3" id="Text1" rows="3" placeholder="What would you like to say?"></textarea>
             </div>
-            <button type="submit" onClick="submitForm()">Submit</button>
+            <SubmitForm />
             </form>
         </div>
     );

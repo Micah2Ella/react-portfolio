@@ -1,5 +1,8 @@
 
 import React, { useState } from "react";
+import ModalSpirit from "./supplements/ModalSpirit";
+import ModalBuhay from "./supplements/ModalBuhay";
+import ModalLamentos from "./supplements/ModalLamentos";
 
 function Projects() {
     return (
@@ -12,7 +15,7 @@ function Projects() {
                 <div class="card-body">
                     <h5 class="card-title1" id="1" OnClick="backdropSpirit()">Inner Spirits</h5>
                     <p class="card-text">A game concept that involves the story of a Monster Hunter named Itatsi. Animatic and Game Pitch!</p>
-                    <br></br><button id="openModalSpirit">Learn More</button>
+                    <br></br><ModalSpirit />
                 </div>
             </div>
 
@@ -21,7 +24,7 @@ function Projects() {
                 <div class="card-body">
                     <h5 class="card-title2" id="2" OnClick="backdropBuhay()">Pangkabuhayan</h5>
                     <p class="card-text">Animatic short film about a father who is a rice farmer and his struggles to support his family in the Philippines.</p>
-                    <br></br><button id="openModalBuhay">Learn More</button>
+                    <br></br><ModalBuhay />
                 </div>
               </div>
 
@@ -30,12 +33,12 @@ function Projects() {
                 <div class="card-body">
                     <h5 class="card-title3" id="3" OnClick="backdropLamentos()">La Lorna</h5>
                     <p class="card-text">Animation assets of a short horror game about a cold case turned supernatural murder.</p>
-                    <br></br><button id="openModalLamentos">Learn More</button>
+                    <br></br><ModalLamentos />
                 </div>
               </div>
             </div>
-            <br></br><br></br>
         </div>
+                
     );
 }
 

@@ -115,9 +115,9 @@ button:link, button:visited {
 
 #card-bg {
     display: flex;
-    background-image: url("default-bg.jpg");
+    background-image: url(./images/default-bg.jpg);
     width: auto;
-    height: 70vh;
+    height: 90vh;
     border-radius: 3vh;
     padding: 5vh;
 }
