@@ -7,15 +7,21 @@ import ContactMe from "./components/ContactMe";
 function App() {
   return (
     <>
-      <div>
-        <h1>
-          Welcome to{" "}
-          <span>react-portfolio</span> 🚀
-        </h1>
-        <p>
-          Your project is ready. Start building amazing things!
-        </p>
-      </div>
+      <div class="navi">
+            <div class="content">
+                <p>《 Micah Ella Abril's Portfolio 》</p>
+                <nav class="leftside">
+                    <a href={AboutMe ()}>About Me</a> 
+                    <a href="#port">Portfolio</a> 
+                    <a href="#contact">Contact Me</a> 
+                </nav>
+                <p id="sparkle">✧.*</p>
+            </div>
+        </div>
+
+        <div name="body">
+
+        </div>
     </>
   );
 }

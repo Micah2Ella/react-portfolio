@@ -1,26 +1,257 @@
-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: sans-serif;
-    background: #f9fafb;
-    color: #111;
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+body {
+    color: rgb(29, 56, 75);
+    background-color: rgb(182, 236, 225);
+}
+
+.navi {
+    position:sticky;
+    background-color: rgb(112, 192, 176);
+    top:0;
+    width: 100vw;
+    height: 10vh;
+    z-index: 2;
+}
+
+.content {
+    font-size: 4vh;
+    padding:2vh;
+}
+
+.leftside {
+    padding-right:2vh;
+    margin-top: -9.5vh;
+    float:right;
+}
+
+#sparkle {
+    margin-top: -8vh;
+    margin-right: 55vh;
+    float:right;
+}
+
+a {
+    font-size: 2.5vh;
+    border-radius: 1vh;
+    padding: 1.5vh 1vw;
+    margin: 1vh;
+}
+
+button {
+    padding:1.5vh;
+    border-radius:1vh;
+    background-color: #295f65;
+    color: rgb(215, 235, 235);
     text-align: center;
-};
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5vh;
 }
 
-span {
-    color: #2563eb;
+button:hover {
+    background-color: #1e3b53;
+    color: rgb(150, 216, 216);
 }
 
-p {
-    font-size: 1.1rem;
-    color: #555;
+a:link, a:visited {
+  background-color: #295f65;
+  color: rgb(215, 235, 235);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #1e3b53;
+  color: rgb(150, 216, 216);
+}
+
+.portcard {
+    font-size: 3vh;
+    margin: 5vh;
+    padding: 10vh;
+    height: auto;
+    border-radius: 2vh;
+    background-color: rgb(141, 217, 192);
+}
+
+.about {
+    font-size: 3vh;
+    margin: 5vh;
+    padding: 10vh;
+    height: auto;
+    border-radius: 2vh;
+    background-color: rgb(141, 217, 192);
+}
+
+#card-bg {
+    display: flex;
+    background-image: url("default-bg.jpg");
+    width: auto;
+    height: 70vh;
+    border-radius: 3vh;
+    padding: 5vh;
+}
+
+.card1 {
+    margin: 5vh;
+    width: 23rem;
+    height: 20vh;
+    background-color: rgb(99, 99, 99);
+    border-radius: 3vh;
+    z-index: 1;
+}
+
+.card2 {
+    margin: 5vh;
+    width: 23rem;
+    height: 20vh;
+    background-color: rgb(55, 63, 100);
+    border-radius: 3vh;
+    z-index: 1;
+}
+
+.card3 {
+    margin: 5vh;
+    width: 23rem;
+    height: 20vh;
+    background-color: rgb(93, 72, 55);
+    border-radius: 3vh;
+    z-index: 1;
+}
+
+.card-body {
+    padding: 3vh;
+    margin:0;
+    border-bottom-right-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+    background-color: rgb(207, 234, 228);
+    height: auto;
+}
+
+.card-img-top {
+    border-top-right-radius: 3vh;
+    border-top-left-radius: 3vh;
+    height:140%;
+    width:100%;
+}
+
+.formbox {
+    display: block;
+    font-size: 3vh;
+    margin: 5vh;
+    padding: 10vh;
+    height: auto;
+    border-radius: 2vh;
+    background-color: rgb(141, 217, 192);
+}
+
+textarea::placeholder, input::placeholder {
+    font-size: 2vh;
+}
+
+textarea, input {
+    color:#265e6d;
+    font-size: 2vh;
+    margin: 1vh;
+}
+
+.indent {
+    margin-left: 5vh;
+}
+
+.form-control {
+    border: solid 0.2vh;
+    border-color:#41757b;
+    border-radius: 1vh;
+    background-color: rgb(207, 234, 228);
+    padding: 1vh;
+}
+
+.box1 {
+    width: 41vh;
+}
+
+.box2 {
+    width: 30vh;
+}
+
+.box3 {
+    width: 80vh;
+    height: 10vh;
+}
+
+label {
+    font-size: 3vh;
+}
+
+.ext-title {
+    font-size: 6vh;
+    font-style: italic;
+    z-index: 1;
+}
+
+.out-info {
+    font-size: 4.5vh;
+    color: #265e6d;
+    z-index: 1;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 3; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(3, 10, 26, 0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(3, 10, 26, 0.4); 
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: rgba(3, 10, 26, 0.4); 
+  text-decoration: none;
+}
+
+.modal-footer {
+  text-align: right;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+}
+
+.modalImage {
+    align-content: center;
+    width: 80vh;
 }
