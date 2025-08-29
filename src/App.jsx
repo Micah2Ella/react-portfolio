@@ -4,16 +4,26 @@ import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <h1>
-        Welcome to{" "}
-        <span>react-portfolio</span> 🚀
-      </h1>
-      <p>
-        Your project is ready. Start building amazing things!
-      </p>
-    </div>
+    <>
+      <div class="navi">
+            <div class="content">
+                <p>《 Micah Ella Abril's Portfolio 》</p>
+                <nav class="leftside">
+                    <a id="AboutMe" class="navbutton" href="#about">About Me</a> 
+                    <a id="Projects" class="navbutton" href="#projects">Portfolio</a> 
+                    <a id="ContactMe" class="navbutton" href="#contact">Contact Me</a> 
+                </nav>
+                <p id="sparkle">✧.*</p>
+            </div>
+        </div>
+
+        <div id="about"><AboutMe /></div>
+        <div id="projects"><Projects /></div>
+        <div id="contact"><ContactMe /></div>
+    </>
   );
 }
+
+export default App;
