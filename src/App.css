@@ -40,6 +40,17 @@ body {
     float:right;
 }
 
+a {
+    padding:1.5vh;
+    border-radius:1vh;
+    background-color: #295f65;
+    color: rgb(215, 235, 235);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5vh;
+}
+
 button {
     padding:1.5vh;
     border-radius:1vh;
@@ -58,6 +69,19 @@ button {
     margin: 1vh;
 }
 
+a:hover {
+    background-color: #1e3b53;
+    color: rgb(150, 216, 216);
+}
+
+a:link, a:visited {
+  background-color: #295f65;
+  color: rgb(215, 235, 235);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 button:hover {
     background-color: #1e3b53;
     color: rgb(150, 216, 216);
@@ -73,7 +97,7 @@ button:link, button:visited {
 
 .portcard {
     font-size: 3vh;
-    margin: 5vh;
+    margin: 3vh;
     padding: 10vh;
     height: auto;
     border-radius: 2vh;
@@ -161,10 +185,6 @@ textarea, input {
     margin: 1vh;
 }
 
-.indent {
-    margin-left: 5vh;
-}
-
 .form-control {
     border: solid 0.2vh;
     border-color:#41757b;
@@ -178,12 +198,13 @@ textarea, input {
 }
 
 .box2 {
-    width: 30vh;
+    width: 41vh;
+    height: 5vh;
 }
 
 .box3 {
-    width: 80vh;
-    height: 10vh;
+    width: 41vh;
+    height: 5vh;
 }
 
 label {
